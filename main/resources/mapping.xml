@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<!-- <!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN" 
+	"http://castor.org/mapping.dtd"> xmlns="http://castor.exolab.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation=" http://castor.exolab.org http://castor.exolab.org/mapping.xsd" -->
+<mapping>
+
+	<class name="com.citics.repo.reporter.fdep.FDEPMsg">
+		<map-to xml="Msg" />
+
+		<field name="msgHeader" type="com.citics.repo.reporter.fdep.FDEPMsgHeader">
+			<bind-xml name="AppHdr" node="element" />
+		</field>
+
+		<field name="document" type="com.citics.repo.reporter.fdep.Document">
+			<bind-xml name="Document" node="element" />
+		</field>
+
+	</class>
+
+	<class name="com.citics.repo.reporter.fdep.Document">
+		<map-to xml="Document" />
+
+		<field name="msgBodyList" type="com.citics.repo.reporter.fdep.FDEPMsgBody"
+			collection="arraylist" required="true">
+			<bind-xml name="Data" node="element" />
+		</field>
+
+	</class>
+
+	<class name="com.citics.repo.reporter.fdep.FDEPMsgHeader">
+		<map-to xml="AppHdr" />
+
+		<field name="charSet" type="java.lang.String">
+			<bind-xml name="CharSet" node="element" />
+		</field>
+
+		<field name="from" type="java.lang.String">
+			<bind-xml name="Fr" node="element" />
+		</field>
+
+		<field name="to" type="java.lang.String">
+			<bind-xml name="To" node="element" />
+		</field>
+
+		<field name="businessMessageIdentifier" type="java.lang.String">
+			<bind-xml name="BizMsgIdr" node="element" />
+		</field>
+
+		<field name="messageDefinitionIdentifier" type="java.lang.String">
+			<bind-xml name="MsgDefIdr" node="element" />
+		</field>
+
+		<field name="businessService" type="java.lang.String">
+			<bind-xml name="BizSvc" node="element" />
+		</field>
+
+		<field name="creationDate" type="java.lang.String">
+			<bind-xml name="CreDt" node="element" />
+		</field>
+
+		<field name="copyDuplicate" type="java.lang.String">
+			<bind-xml name="CpyDplct" node="element" />
+		</field>
+
+		<field name="possibleDuplicate" type="java.lang.String">
+			<bind-xml name="PssblDplct" node="element" />
+		</field>
+
+		<field name="validateResult" type="java.lang.String">
+			<bind-xml name="VldtRst" node="element" />
+		</field>
+
+		<field name="related" type="java.lang.String">
+			<bind-xml name="Rltd" node="element" />
+		</field>
+
+		<field name="signature" type="java.lang.String">
+			<bind-xml name="Sgntr" node="element" />
+		</field>
+
+	</class>
+
+	<class name="com.citics.repo.reporter.fdep.FDEPAppPurchaseMsgBody">
+		<map-to xml="Data" />
+
+		<field name="appSheetSerialNo" type="java.lang.String">
+			<bind-xml name="AppNo" node="element" />
+		</field>
+		<field name="discountRateOfCommission" type="java.math.BigDecimal">
+			<bind-xml name="DscntRtComssn" node="element" />
+		</field>
+		<field name="depositAcct" type="java.lang.String">
+			<bind-xml name="DpstAcct" node="element" />
+		</field>
+		<field name="regionCode" type="java.lang.String">
+			<bind-xml name="RegCd" node="element" />
+		</field>
+		<field name="currencyType" type="java.lang.String">
+			<bind-xml name="ccyTp" node="element" />
+		</field>
+		<field name="downLoaddate" type="java.lang.String">
+			<bind-xml name="DwnldDt" node="element" />
+		</field>
+		<field name="businessCode" type="java.lang.String">
+			<bind-xml name="BizCd" node="element" />
+		</field>
+	</class>
+
+	<class name="com.citics.repo.reporter.fdep.FDEPRedeemMsgBody">
+		<map-to xml="Data" />
+
+		<field name="appSheetSerialNo" type="java.lang.String">
+			<bind-xml name="AppNo" node="element" />
+		</field>
+		<field name="regionCode" type="java.lang.String">
+			<bind-xml name="RegCd" node="element" />
+		</field>
+	</class>
+
+	<class name="com.citics.repo.reporter.fdep.FDEPOpenAccountApplyMsgBody">
+		<map-to xml="Data" />
+
+		<field name="intermediariesIdentification" type="java.lang.String">
+			<bind-xml name="IntrmiesId" node="element" />
+		</field>
+		<field name="orderReference" type="java.lang.String">
+			<bind-xml name="OrdrRef" node="element" />
+		</field>
+		<field name="transactionDate" type="java.lang.String">
+			<bind-xml name="TxDt" node="element" />
+		</field>
+		<field name="transactionTime" type="java.lang.String">
+			<bind-xml name="TxTm" node="element" />
+		</field>
+		<field name="investorName" type="java.lang.String">
+			<bind-xml name="InvstrNm" node="element" />
+		</field>
+		<field name="certificateType" type="java.lang.String">
+			<bind-xml name="CertTp" node="element" />
+		</field>
+		<field name="identification" type="java.lang.String">
+			<bind-xml name="Id" node="element" />
+		</field>
+		<field name="mobile" type="java.lang.String">
+			<bind-xml name="Mob" node="element" />
+		</field>
+		<field name="accountIdentification" type="java.lang.String">
+			<bind-xml name="AcctId" node="element" />
+		</field>
+		<field name="businessCode" type="java.lang.String">
+			<bind-xml name="BizCd" node="element" />
+		</field>
+		<field name="nationality" type="java.lang.String">
+			<bind-xml name="Ntlty" node="element" />
+		</field>
+		<field name="clientRiskLevel" type="java.lang.String">
+			<bind-xml name="RskLvl" node="element" />
+		</field>
+		<field name="extension" type="java.lang.String">
+			<bind-xml name="Xtnsn" node="element" />
+		</field>
+
+	</class>
+	
+	<class name="com.citics.repo.reporter.fdep.FDEPOpenAccountConfirmMsgBody">
+		<map-to xml="Data" />
+
+		<field name="intermediariesIdentification" type="java.lang.String">
+			<bind-xml name="IntrmiesId" node="element" />
+		</field>
+		<field name="relatedReference" type="java.lang.String">
+			<bind-xml name="RltdRef" node="element" />
+		</field>
+		<field name="orderReference" type="java.lang.String">
+			<bind-xml name="OrdrRef" node="element" />
+		</field>
+		<field name="transactionDate" type="java.lang.String">
+			<bind-xml name="TxDt" node="element" />
+		</field>
+		<field name="transactionTime" type="java.lang.String">
+			<bind-xml name="TxTm" node="element" />
+		</field>
+		<field name="returnCode" type="java.lang.String">
+			<bind-xml name="RtnCd" node="element" />
+		</field>
+		<field name="returnMessage" type="java.lang.String">
+			<bind-xml name="RtnMsg" node="element" />
+		</field>
+		<field name="accountIdentification" type="java.lang.String">
+			<bind-xml name="AcctId" node="element" />
+		</field>
+		<field name="businessCode" type="java.lang.String">
+			<bind-xml name="BizCd" node="element" />
+		</field>
+
+	</class>
+
+</mapping>
